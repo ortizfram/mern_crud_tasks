@@ -10,7 +10,6 @@ const taskCreate = async (req, res, next) => {
   const savedTask = await newTask.save();
   res.json(savedTask);
 };
-
 const tasks = async (req, res, next) => {
   const tasks = await Task.find();// {user:req.body.currentUser} for only auth user created tasks
   res.json(tasks);
